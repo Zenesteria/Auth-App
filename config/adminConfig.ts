@@ -3,7 +3,7 @@ import { credential } from "firebase-admin";
 import {getAuth} from 'firebase-admin/auth'
 import * as firebase from 'firebase-admin'
 
-const serviceCredentials = JSON.stringify({
+const serviceCredentials = process.env.NODE_ENV == 'production' ? JSON.stringify({
     type:process.env.TYPE,
     project_id:process.env.FIREBASE_APP_PROJECT_ID,
     private_key_id:process.env.PRIVATE_KEY,
@@ -13,7 +13,7 @@ const serviceCredentials = JSON.stringify({
     token_url:process.env.TOKEN_URL,
     auth_provider_x509_cert_url:process.env.AUTH_PROVIDER,
     client_x509_cert_url:process.env.CLIENT_CERT
-}) || require('../serviceAccountKey.json');
+}) : require('../serviceAccountKey.json');
 
 
 const adminConfigOpts = {
