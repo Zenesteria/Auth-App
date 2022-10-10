@@ -13,6 +13,7 @@ const nextConfig = {
     NEXT_PRIVATE_KEY_ID:process.env.PRIVATE_KEY_ID,
     NEXT_PRIVATE_KEY:process.env.PRIVATE_KEY,
     NEXT_CLIENT_EMAIL:process.env.CLIENT_EMAIL,
+    NEXT_CLIENT_ID:process.env.CLIENT_ID,
     NEXT_AUTH_URL:process.env.AUTH_URL,
     NEXT_TOKEN_URL:process.env.TOKEN_URL,
     NEXT_AUTH_PROVIDER:process.env.AUTH_PROVIDER,
