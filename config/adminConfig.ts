@@ -9,7 +9,6 @@ const adminConfigOpts = {
     credential:applicationDefault()
 }
 
-const admin = !firebase.apps.length ? initializeApp(adminConfigOpts, 'admin') : firebase.app('admin')
-
+const admin = !firebase.apps.length ? initializeApp() : firebase.app()
 export const adminAuth = getAuth(admin);
 
