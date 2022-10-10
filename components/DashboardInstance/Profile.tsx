@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
+import Server from '../../util/Server'
 
 export default function Profile() {
     const [user, setUser] = useState(
@@ -17,7 +18,7 @@ export default function Profile() {
 
 
         if(!fetched){
-            fetch('/api/user', {
+            fetch(`${Server}/api/user`, {
                 body:JSON.stringify({uid}),
                 headers:{
                     'Content-type':'application/json'
