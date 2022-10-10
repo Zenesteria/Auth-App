@@ -10,8 +10,6 @@ const firebaseConfig = {
   appId: process.env.NEXT_ID
 };
 
-console.log(firebaseConfig)
-
 // Initialize Firebase
 export const app = !firebase.getApps().length ? firebase.initializeApp(firebaseConfig, 'app') : firebase.getApp('app');
 

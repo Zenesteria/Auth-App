@@ -13,7 +13,7 @@ export default function SignOut() {
         console.log(signOutResponse)
         sessionStorage.removeItem('Auth Token')
         sessionStorage.removeItem('uid')
-        router.push('/register')
+        router.push('/login')
       } catch (error) {
         console.log(error)
       }

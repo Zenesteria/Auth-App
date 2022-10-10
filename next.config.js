@@ -10,6 +10,7 @@ const nextConfig = {
     NEXT_MESSAGING_SENDER_ID: process.env.FIREBASE_APP_MESSAGING_SENDER_ID,
     NEXT_APP_ID: process.env.FIREBASE_APP_ID,
     NEXT_TYPE:process.env.TYPE,
+    NEXT_PRIVATE_KEY_ID:process.env.PRIVATE_KEY_ID,
     NEXT_PRIVATE_KEY:process.env.PRIVATE_KEY,
     NEXT_CLIENT_EMAIL:process.env.CLIENT_EMAIL,
     NEXT_AUTH_URL:process.env.AUTH_URL,
