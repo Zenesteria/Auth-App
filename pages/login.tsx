@@ -44,10 +44,10 @@ export default function Login() {
                 Login to Account
             </h1>
             <form onSubmit={handleSubmit} className='flex flex-col w-full h-fit'>
-                <input type="text" value={email} className='w-full bg-transparent outline-none focus:outline-none border-b py-2 my-5' placeholder='Email' 
+                <input type="text" value={email} className='w-full bg-transparent outline-none focus:outline-none border-b py-2 my-5' required placeholder='Email' 
                 onChange={(e:any) => {setEmail(e.target.value)}} />
 
-                <input type="text" value={password} className='w-full bg-transparent outline-none focus:outline-none border-b py-2 my-5' placeholder='Password' 
+                <input type="password" value={password} className='w-full bg-transparent outline-none focus:outline-none border-b py-2 my-5' required placeholder='Password' 
                 onChange={(e:any) => {setPassword(e.target.value)}}/>
 
                 <button type='submit' className='w-full rounded-lg p-2 font-semibold tracking-widest text-white bg-blue-800 my-5 hover:bg-blue-900 duration-300' style={{fontSize:'calc(0.6rem + 0.5vw)'}}>

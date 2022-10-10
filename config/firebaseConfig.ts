@@ -8,6 +8,7 @@ const firebaseConfig = {
   messagingSenderId: process.env.FIREBASE_APP_MESSAGING_SENDER_ID,
   appId: process.env.FIREBASE_APP_ID
 };
+console.log(firebaseConfig)
 
 // Initialize Firebase
 export const app = !firebase.getApps().length ? firebase.initializeApp(firebaseConfig, 'app') : firebase.getApp('app');

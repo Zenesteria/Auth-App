@@ -95,7 +95,7 @@ export default function Login() {
                 <input type="text" value={name} className='w-full bg-transparent outline-none focus:outline-none border-b py-2 my-5' required placeholder='Full Name'
                     onChange={(e) => {setName(e.target.value)}}
                 />
-                <input type="text" value={email} className='w-full bg-transparent outline-none focus:outline-none border-b py-2 my-5' required placeholder='Email'
+                <input type="password" value={email} className='w-full bg-transparent outline-none focus:outline-none border-b py-2 my-5' required placeholder='Email'
                     onChange={(e) => {setEmail(e.target.value)}}
                 />
 
