@@ -10,7 +10,6 @@ export default function SignOut() {
       const auth = getAuth(app)
       try {
         const signOutResponse = await signOut(auth)
-        console.log(signOutResponse)
         sessionStorage.removeItem('Auth Token')
         sessionStorage.removeItem('uid')
         router.push('/login')

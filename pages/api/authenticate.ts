@@ -9,7 +9,7 @@ const authenticate:NextApiHandler = async (req:NextApiRequest,res:NextApiRespons
         res.status(200).json({uid:decodedToken.uid});
     } catch (error) {
         console.log(error)
-        res.status(500).json(error);
+        res.status(500).json({error});
     }
 }
 

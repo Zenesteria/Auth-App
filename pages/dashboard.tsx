@@ -4,7 +4,7 @@ import DashboardInstance from '../components/DashboardInstance';
 import Redirect from '../components/Redirect';
 
 export default function Dashboard() {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(true);
     const [authenticated, setAuthenticated] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false)
     const [data, setData] = useState('');
@@ -16,7 +16,7 @@ export default function Dashboard() {
         const token = sessionStorage.getItem('Auth Token');
         setIsLoaded(true)
         // console.log(token);
-        if(!authenticated && token){
+        if(!authenticated){
           fetch('/api/authenticate',{
             body:JSON.stringify({
               token
@@ -28,16 +28,21 @@ export default function Dashboard() {
           }).then(async (response) => {
             response.json()
             .then((res) => {
-                sessionStorage.setItem('uid', res.uid)
-                setAuthenticated(true);
-                setIsLoggedIn(true);
+                if(!res.error){
+                  console.log('success')
+                  sessionStorage.setItem('uid', res.uid)
+                  setAuthenticated(true);
+                  return
+                }
+                console.log('error')
+                setIsLoggedIn(false)
             })
           })
         }
 
-        return () => {
-          setIsLoaded(false);
-        }
+        // return () => {
+        //   setIsLoaded(true);
+        // }
 
         // else if(!token){
         //   setTimeout(() => {
@@ -48,7 +53,7 @@ export default function Dashboard() {
     },[isLoggedIn,data, authenticated, router])
   return (
     <div>
-        {isLoggedIn && <DashboardInstance/>}
+        {isLoggedIn && authenticated && <DashboardInstance/>}
         {isLoaded && !isLoggedIn && <Redirect msg='NOT LOGGED IN PLEASE LOG IN' to='/login' duration={5}/>}
     </div>
   )
