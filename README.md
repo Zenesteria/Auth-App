@@ -1,3 +1,32 @@
+# Firebase Authentication Starter
+
+This is an authentication application built using [Firebase](https://firebase.google.com/) and [Next.js](https://nextjs.org/) for the frontend.
+
+## Technologies
+- [Next.js](https://nextjs.org/)
+- [Firebase](https://firebase.google.com/)
+- [Reduxjs-Toolkit](https://redux-toolkit.js.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Tailwind-CSS](https://tailwindcss.com/)
+
+## Preview
+
+
+## Getting Started
+
+#### Installing dev dependencies
+
+```bash
+npm i
+```
+
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
