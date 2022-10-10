@@ -53,7 +53,7 @@ export default function Profile() {
         <h1 className='mt-3 font-semibold' style={{fontSize:'calc(0.6rem + 0.35vw)'}}>
             {`Welcome ${user.name}`}
         </h1>
-        <h3 className='font-extralight text-gray-600 w-[70%] my-2' style={{fontSize:'calc(0.5rem + 0.25vw)'}}>
+        <h3 className='font-extralight text-gray-600 w-full text-center my-2' style={{fontSize:'calc(0.5rem + 0.25vw)'}}>
             uid: <strong>{`${user.uid}`}</strong>
         </h3>
     </div>

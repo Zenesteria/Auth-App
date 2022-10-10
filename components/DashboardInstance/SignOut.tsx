@@ -21,7 +21,7 @@ export default function SignOut() {
   }
   return (
     <div onClick={handleClick} className='flex items-center mt-auto cursor-pointer group'>
-        <FaSignOutAlt className='mr-3'/>
+        <FaSignOutAlt className='mr-3 text-red-600'/>
         <p className='font-light group-hover:tracking-wider duration-300' style={{fontSize:'calc(0.6rem + 0.35vw)'}}>Sign Out</p>
     </div>
   )

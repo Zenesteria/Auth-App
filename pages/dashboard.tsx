@@ -52,7 +52,7 @@ export default function Dashboard() {
         
     },[isLoggedIn,data, authenticated, router])
   return (
-    <div>
+    <div className='overflow-hidden'>
         {isLoggedIn && authenticated && <DashboardInstance/>}
         {isLoaded && !isLoggedIn && <Redirect msg='NOT LOGGED IN PLEASE LOG IN' to='/login' duration={5}/>}
     </div>
