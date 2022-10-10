@@ -1,13 +1,15 @@
 import * as firebase from "firebase/app";
 import {getFirestore} from 'firebase/firestore'
+
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_APP_API_KEY,
-  authDomain: process.env.FIREBASE_APP_AUTH_DOMAIN,
-  projectId: process.env.FIREBASE_APP_PROJECT_ID,
-  storageBucket: process.env.FIREBASE_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_APP_MESSAGING_SENDER_ID,
-  appId: process.env.FIREBASE_APP_ID
+  apiKey: process.env.NEXT_API_KEY,
+  authDomain: process.env.NEXT_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PROJECT_ID,
+  storageBucket: process.env.NEXT_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_ID
 };
+
 console.log(firebaseConfig)
 
 // Initialize Firebase
