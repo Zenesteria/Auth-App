@@ -48,7 +48,9 @@ CLIENT_CERT=
 
 
 ## Socials
-[![Twitter Badge](https://img.shields.io/badge/Twitter-Profile-informational?style=flat&logo=twitter&logoColor=white&color=1CA2F1)](https://twitter.com/dev_ants)
-[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-Profile-informational?style=flat&logo=linkedin&logoColor=white&color=0D76A8)](https://www.linkedin.com/in/abdurrahman-aderinto/)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png" alt="drawing" width="30"/>
+<img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="drawing" width="30"/>
+
+
 
 
