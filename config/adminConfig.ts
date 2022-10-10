@@ -4,11 +4,6 @@ import * as firebase from 'firebase-admin'
 
 
 
-
-const adminConfigOpts = {
-    credential:applicationDefault()
-}
-
 const admin = !firebase.apps.length ? initializeApp() : firebase.app()
 export const adminAuth = getAuth(admin);
 
