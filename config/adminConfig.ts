@@ -3,7 +3,7 @@ import { credential } from "firebase-admin";
 import {getAuth} from 'firebase-admin/auth'
 import * as firebase from 'firebase-admin'
 
-const serviceCredentials = process.env.NODE_ENV == 'development' ? JSON.stringify({
+const serviceCredentials = process.env.NODE_ENV == 'production' ? JSON.stringify({
     type:process.env.NEXT_TYPE,
     project_id:process.env.NEXT_PROJECT_ID,
     private_key_id:process.env.NEXT_PRIVATE_KEY_ID,
@@ -31,7 +31,7 @@ const serviceCredentials = process.env.NODE_ENV == 'development' ? JSON.stringif
 
 
 const adminConfigOpts = {
-    credential:process.env.NODE_ENV == 'development' ? JSON.parse(serviceCredentials) : credential.cert(serviceCredentials)
+    credential:process.env.NODE_ENV == 'production' ? JSON.parse(serviceCredentials) : credential.cert(serviceCredentials)
 }
 
 const admin = !firebase.apps.length ? initializeApp(adminConfigOpts, 'admin') : firebase.app('admin')
