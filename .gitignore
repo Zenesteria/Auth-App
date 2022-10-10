@@ -32,7 +32,7 @@ yarn-error.log*
 .vercel
 
 #Service Credentials
-config/serviceAccountKey.json
+serviceAccountKey.json
 
 # typescript
 *.tsbuildinfo

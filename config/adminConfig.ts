@@ -3,7 +3,7 @@ import { credential } from "firebase-admin";
 import {getAuth} from 'firebase-admin/auth'
 import * as firebase from 'firebase-admin'
 
-const serviceCredentials = require('./serviceAccountKey.json');
+const serviceCredentials = require('../serviceAccountKey.json');
 
 
 
