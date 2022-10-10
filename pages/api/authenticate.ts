@@ -8,7 +8,7 @@ const authenticate:NextApiHandler = async (req:NextApiRequest,res:NextApiRespons
         const decodedToken = await adminAuth.verifyIdToken(`${req.body.token}`)
         res.status(200).json({uid:decodedToken.uid});
     } catch (error) {
-        console.log(error)
+        // console.log(error)
         res.status(500).json({error});
     }
 }
